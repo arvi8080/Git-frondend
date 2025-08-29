@@ -1,0 +1,66 @@
+/* profile.css */
+
+body {
+  background-color: #0d1117; /* GitHub dark background */
+  color: #c9d1d9;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.profile-page-wrapper {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.user-profile-section {
+  width: 250px;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #30363d;
+  margin: 0 auto 1rem;
+}
+
+.name h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.follow-btn {
+  background: #238636;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 600;
+  padding: 6px 16px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  transition: background 0.2s ease-in-out;
+}
+
+.follow-btn:hover {
+  background: #2ea043;
+}
+
+.follower {
+  display: flex;
+  justify-content: space-around;
+  font-size: 14px;
+  color: #8b949e;
+}
+
+.heat-map-section {
+  flex: 1;
+  background: #161b22;
+  border-radius: 8px;
+  padding: 1rem;
+  min-height: 300px;
+}
