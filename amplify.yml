@@ -3,14 +3,31 @@ frontend:
   phases:
     preBuild:
       commands:
+        # Install nvm (Node Version Manager)
+        - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.6/install.sh | bash
+        - export NVM_DIR="$HOME/.nvm"
+        - [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+        # Install and use Node 24.7.0
+        - nvm install 24.7.0
+        - nvm use 24.7.0
+
+        # Check Node & npm versions
+        - node -v
+        - npm -v
+
+        # Install dependencies
         - npm ci
+
     build:
       commands:
         - npm run build
+
   artifacts:
     baseDirectory: dist
     files:
       - '**/*'
+
   cache:
     paths:
       - node_modules/**/*
