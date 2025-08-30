@@ -3,7 +3,12 @@ frontend:
   phases:
     preBuild:
       commands:
-        - echo "Checking Node version"
+        - echo "Installing Node 24.7.0 using NVM"
+        - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.6/install.sh | bash
+        - export NVM_DIR="$HOME/.nvm"
+        - source $NVM_DIR/nvm.sh
+        - nvm install 24.7.0
+        - nvm use 24.7.0
         - node -v
         - npm -v
         - npm ci
